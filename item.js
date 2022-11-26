@@ -30,5 +30,5 @@ class Item {
 
 let ALL_ITEMS = [
     new Item(['UCLan Hoodie', 'Purple', 'cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks', ' Only Ј39.99', 'images/items/hoodies/hoodie (1).jpg']),
-    new Item(['UCLan Hoodie','Light Blue','cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks',' Only Ј39.99','images/items/hoodies/hoodie (2).jpg'])
+    new Item(['UCLan Hoodie', 'Light Blue', 'cotton authentic character and practicality are combined in this comfy  warm and luxury hoodie for students that goes with everything to create casual looks', ' Only Ј39.99', 'images/items/hoodies/hoodie (2).jpg'])
 ];

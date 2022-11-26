@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
+    <script type="text/javascript" src="item.js"></script>
 </head>
 <body>
 <header>
@@ -11,7 +12,14 @@
     <a href="products.html">Products</a>
     <a href="cart.html">Cart</a>
 </header>
+
 <p>products > hoodies jumpers t-shirts</p>
+<script>
+    for (let i = 0; i < ALL_ITEMS.length; ++i) {
+        let item = document.createElement("div");
+        document.body.appendChild(item);
+    }
+</script>
 <footer>
     <h1>Links</h1>
     <a href="https://www.uclansu.co.uk/">Student's Union</a>
