@@ -4,25 +4,16 @@
     <meta charset="UTF-8">
     <title>Products</title>
     <script type="text/javascript" src="item.js"></script>
+    <script type="text/javascript" src="common.js"></script>
     <link rel="stylesheet" href="shop.css">
 </head>
-<body>
+<body id="body">
 
-<header>
-    <h1>Student Shop</h1>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="cart.html">Cart</a>
-</header>
+<script>addHeader();</script>
 
 <p>products > hoodies jumpers t-shirts</p>
 
 <div id="list">
-    <div id="example" class="itemCard">
-        <img src="resources/images/items/hoodies/hoodie (1).jpg" alt="hoodie 1" width="90%">
-        <h2>description</h2>
-        <h3>value</h3>
-    </div>
 </div>
 
 <script>
@@ -32,25 +23,14 @@
         element.className = "itemCard";
         element.innerHTML =
             "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"90%\">\n" +
+            "<h1>" + ALL_ITEMS[i].color + " " + ALL_ITEMS[i].type + "</h1>" +
             "<p>" + ALL_ITEMS[i].description + "</p>\n" +
-            "<h3>" + ALL_ITEMS[i].value + "</h3>\n";
+            "<h2>" + ALL_ITEMS[i].value + "</h2>\n";
         list.appendChild(element);
-
     }
 </script>
 
-<footer>
-    <h1>Links</h1>
-    <a href="https://www.uclansu.co.uk/">Student's Union</a>
-    <h1>Contact</h1>
-    <p>Email: suinformation@uclan.ac.uk</p>
-    <p>Phone: 01772 89 3000</p>
-    <h1>Location</h1>
-    <p>University of Central Lancashire Students' Union,
-        <br>Fylde Road, Preston, PR1 7BY
-        <br>Registered in England
-        <br>Company Number: 7623917
-        <br>Registered Charity Number: 1142616</p>
-</footer>
+<script>addFooter();</script>
+
 </body>
 </html>
