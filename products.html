@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Products</title>
     <script type="text/javascript" src="item.js"></script>
+    <link rel="stylesheet" href="shop.css">
 </head>
 <body>
+
 <header>
     <h1>Student Shop</h1>
     <a href="index.html">Home</a>
@@ -14,18 +16,29 @@
 </header>
 
 <p>products > hoodies jumpers t-shirts</p>
+
+<div id="list">
+    <div id="example" class="itemCard">
+        <img src="resources/images/items/hoodies/hoodie (1).jpg" alt="hoodie 1" width="90%">
+        <h2>description</h2>
+        <h3>value</h3>
+    </div>
+</div>
+
 <script>
+    let list = document.querySelector('#list');
     for (let i = 0; i < ALL_ITEMS.length; ++i) {
-        let div = document.createElement("div");
-        div.innerHTML = "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].type + " " + ALL_ITEMS[i].color + "\" width=\"90%\">";
-        document.body.appendChild(div);
+        let element = document.createElement("div");
+        element.className = "itemCard";
+        element.innerHTML =
+            "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"90%\">\n" +
+            "<p>" + ALL_ITEMS[i].description + "</p>\n" +
+            "<h3>" + ALL_ITEMS[i].value + "</h3>\n";
+        list.appendChild(element);
+
     }
 </script>
-<!--<div style="width: 100px">
-    <img src="resources/images/items/hoodies/hoodie (1).jpg" alt="hoodie 1" width="90%">
-    <h2>description</h2>
-    <h3>value</h3>
-</div>-->
+
 <footer>
     <h1>Links</h1>
     <a href="https://www.uclansu.co.uk/">Student's Union</a>
