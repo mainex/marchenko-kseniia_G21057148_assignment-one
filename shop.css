@@ -2,3 +2,13 @@
     width: 200px;
 
 }
+
+footer {
+    place-items: start;
+    display: flex;
+}
+
+header {
+    place-items: center;
+    display: flex;
+}
