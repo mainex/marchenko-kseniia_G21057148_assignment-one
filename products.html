@@ -11,11 +11,11 @@
 
 <script>addHeader();</script>
 
-<div>
-    <button onclick='updateList("all")'>all products</button>
-    <button onclick='updateList("UCLan Hoodie")'>hoodies</button>
-    <button onclick='updateList("UCLan�Logo�Jumper")'>jumpers</button>
-    <button onclick='updateList("UCLan Logo Tshirt")'>t-shirts</button>
+<div id="btnContainer">
+    <button class="filterBtn active" onclick='updateList("all")'>all products</button>
+    <button class="filterBtn" onclick='updateList("UCLan Hoodie")'>hoodies</button>
+    <button class="filterBtn" onclick='updateList("UCLan�Logo�Jumper")'>jumpers</button>
+    <button class="filterBtn" onclick='updateList("UCLan Logo Tshirt")'>t-shirts</button>
 </div>
 
 <div id="list">
