@@ -1,8 +1,11 @@
-.itemCard {
+[class*="itemCard"] {
     width: 200px;
-
 }
 
+.active, .filterBtn:hover {
+    background-color: #666;
+    color: white;
+}
 footer {
     place-items: start;
     display: flex;

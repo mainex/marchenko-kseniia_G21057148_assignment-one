@@ -11,22 +11,43 @@
 
 <script>addHeader();</script>
 
-<p>products > hoodies jumpers t-shirts</p>
+<div id="btnContainer">
+    <button class="filterBtn active" onclick='updateList("all")'>all products</button>
+    <button class="filterBtn" onclick='updateList("UCLan Hoodie")'>hoodies</button>
+    <button class="filterBtn" onclick='updateList("UCLan�Logo�Jumper")'>jumpers</button>
+    <button class="filterBtn" onclick='updateList("UCLan Logo Tshirt")'>t-shirts</button>
+</div>
 
 <div id="list">
 </div>
 
 <script>
-    let list = document.querySelector('#list');
-    for (let i = 0; i < ALL_ITEMS.length; ++i) {
-        let element = document.createElement("div");
-        element.className = "itemCard";
-        element.innerHTML =
-            "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"90%\">\n" +
-            "<h1>" + ALL_ITEMS[i].color + " " + ALL_ITEMS[i].type + "</h1>" +
-            "<p>" + ALL_ITEMS[i].description + "</p>\n" +
-            "<h2>" + ALL_ITEMS[i].value + "</h2>\n";
-        list.appendChild(element);
+    function createList() {
+        let list = document.querySelector('#list');
+        for (let i = 0; i < ALL_ITEMS.length; ++i) {
+            let element = document.createElement("div");
+            element.className = "itemCard" + ALL_ITEMS[i].type;
+            element.id = "itemCard" + i;
+            element.innerHTML =
+                "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"90%\">\n" +
+                "<h1>" + ALL_ITEMS[i].color + " " + ALL_ITEMS[i].type + "</h1>" +
+                "<p>" + ALL_ITEMS[i].description + "</p>\n" +
+                "<h2>" + ALL_ITEMS[i].value + "</h2>\n";
+            list.appendChild(element);
+        }
+    }
+
+    createList();
+
+    function updateList(filter) {
+        for (let i = 0; i < ALL_ITEMS.length; ++i) {
+            let item = document.getElementById("itemCard" + i);
+            if ("all" === filter || "itemCard" + filter === item.className) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        }
     }
 </script>
 
