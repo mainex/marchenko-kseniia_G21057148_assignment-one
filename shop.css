@@ -1,6 +1,5 @@
-.itemCard {
+[class*="itemCard"] {
     width: 200px;
-
 }
 
 footer {
