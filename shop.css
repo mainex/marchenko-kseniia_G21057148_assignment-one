@@ -1,27 +1,35 @@
 [class*="itemCard"] {
     width: 200px;
+    background-color: #C7CBDA;
 }
 
 .active, .filterBtn:hover {
     background-color: #666;
     color: white;
 }
+
 footer {
     place-items: start;
     display: flex;
+    background-color: #BE1622;
 }
 
 header {
     place-items: center;
     display: flex;
+    background-color: #BE1622;
 }
 
-#list{
+#list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
-header, footer {
-    background-color: #BE1622;
+h1 {
 
+}
+
+h2 {
+    color: #F2BE1A;
+    margin: 10px;
 }

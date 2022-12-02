@@ -29,10 +29,10 @@
             element.className = "itemCard" + ALL_ITEMS[i].type;
             element.id = "itemCard" + i;
             element.innerHTML =
-                "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"90%\">\n" +
-                "<h1>" + ALL_ITEMS[i].color + " " + ALL_ITEMS[i].type + "</h1>" +
+                "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\">\n" +
+                "<h2>" + ALL_ITEMS[i].color + " " + ALL_ITEMS[i].type + "</h2>" +
                 "<p>" + ALL_ITEMS[i].description + "</p>\n" +
-                "<h2>" + ALL_ITEMS[i].value + "</h2>\n";
+                "<h3>" + ALL_ITEMS[i].value + "</h3>\n";
             list.appendChild(element);
         }
     }
