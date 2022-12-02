@@ -17,6 +17,7 @@ function addFooter() {
 function addHeader() {
     let header = document.createElement("header");
     header.innerHTML =
+        "<img src='resources/images/logo.svg' width='200px'>" +
         "<div><h1>Student Shop</h1></div>" +
         "<div><a href=\"index.html\">Home</a>" +
         "<a href=\"products.html\">Products</a>" +
