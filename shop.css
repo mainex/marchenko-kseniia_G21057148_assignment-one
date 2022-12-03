@@ -12,12 +12,14 @@ footer {
     place-items: start;
     display: flex;
     background-color: #BE1622;
+    margin: 0px;
 }
 
 header {
     place-items: center;
     display: flex;
     background-color: #BE1622;
+    margin: 0px;
 }
 
 #list {
@@ -32,4 +34,8 @@ h1 {
 h2 {
     color: #F2BE1A;
     margin: 10px;
+}
+
+body {
+    margin: 0px;
 }
