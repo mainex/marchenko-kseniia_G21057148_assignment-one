@@ -22,6 +22,54 @@
 </div>
 
 <script>
+    class Item {
+        constructor(text) {
+            this._type = text[0];
+            this._color = text[1];
+            this._description = text[2];
+            this._value = text[3];
+            this._image = text[4];
+        }
+
+        get type() {
+            return this._type;
+        }
+
+        get color() {
+            return this._color;
+        }
+
+        get description() {
+            return this._description;
+        }
+
+        get value() {
+            return this._value;
+        }
+
+        get image() {
+            return this._image;
+        }
+    }
+
+    let ALL_ITEMS = [];
+    let lines = [];
+
+    fetch("resources/items.csv").then(response => {
+        console.log(response.status);
+        response.text().then(response => {
+            console.log(response); //Prints the response text on the console for debugging.
+            lines = response.split('\n');
+            console.log(lines.length);
+            for (let i = 0; i < lines.length; ++i) {
+                let line = lines[i].split(',');
+                if (line[0].length > 0) {
+                    ALL_ITEMS.push(new Item(line));
+                }
+            }
+            createList();
+        })
+    });
     function createList() {
         let list = document.querySelector('#list');
         for (let i = 0; i < ALL_ITEMS.length; ++i) {
@@ -36,8 +84,6 @@
             list.appendChild(element);
         }
     }
-
-    createList();
 
     function updateList(filter) {
         for (let i = 0; i < ALL_ITEMS.length; ++i) {
