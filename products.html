@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
-    <script type="text/javascript" src="item.js"></script>
     <script type="text/javascript" src="common.js"></script>
     <link rel="stylesheet" href="shop.css">
 </head>
@@ -70,16 +69,19 @@
             createList();
         })
     });
+
     function createList() {
         let list = document.querySelector('#list');
         for (let i = 0; i < ALL_ITEMS.length; ++i) {
             let element = document.createElement("div");
             element.className = "itemCard" + ALL_ITEMS[i].type;
             element.id = "itemCard" + i;
+            //element.onclick = "window.open(\"https://www.youtube.com/\")";
             element.innerHTML =
-                "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\">\n" +
+                "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\" onclick=\"window.open(\"https://www.youtube.com/\")\">\n" +
                 "<h2>" + ALL_ITEMS[i].color + " " + ALL_ITEMS[i].type + "</h2>" +
                 "<p>" + ALL_ITEMS[i].description + "</p>\n" +
+                "<a href=\"item.html\">more info</a>" +
                 "<h3>" + ALL_ITEMS[i].value + "</h3>\n";
             list.appendChild(element);
         }

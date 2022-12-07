@@ -1,8 +1,11 @@
 [class*="itemCard"] {
     width: 200px;
     background-color: #C7CBDA;
+    cursor:pointer;
 }
-
+img{
+    cursor:pointer;
+}
 .active, .filterBtn:hover {
     background-color: #666;
     color: white;

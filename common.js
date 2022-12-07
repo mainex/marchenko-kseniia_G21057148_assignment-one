@@ -24,3 +24,7 @@ function addHeader() {
         "<a href=\"cart.html\">Cart</a></div>";
     document.body.appendChild(header);
 }
+
+function toItemPage(i) {
+    window.open()
+}
