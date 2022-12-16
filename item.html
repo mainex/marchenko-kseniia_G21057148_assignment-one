@@ -9,11 +9,20 @@
 <body>
 <script>addHeader();</script>
 <script>
-    const queryString = window.location.search;
-    console.log(queryString);
-    const urlParams = new URLSearchParams(queryString);
-    const type = urlParams.get('type'), color = urlParams.get('color'), description = urlParams.get('description'),
-        value = urlParams.get('value'), image = urlParams.get('image');
+    const query = window.location.search;
+    console.log(query);
+    const params = new URLSearchParams(query);
+    const type = params.get('type'), color = params.get('color'), description = params.get('description'),
+        value = params.get('value'), image = params.get('image');
+
+    let element = document.createElement("div");
+    element.className = "itemPage";
+    element.innerHTML =
+        "<img src=\"resources/" +image + "\" alt=\"" + description + "\" width=\"100%\">\n" +
+        "<h2>" + color + " " + type + "</h2>" +
+        "<p>" + description +
+        "<h3>" + value + "</h3>";
+    document.body.appendChild(element);
 </script>
 <script>addFooter();</script>
 </body>
