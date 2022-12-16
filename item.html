@@ -18,10 +18,11 @@
     let element = document.createElement("div");
     element.className = "itemPage";
     element.innerHTML =
-        "<img src=\"resources/" +image + "\" alt=\"" + description + "\" width=\"100%\">\n" +
+        "<img src=\"resources/" + image + "\" alt=\"" + description + "\" width=\"100%\">\n" +
         "<h2>" + color + " " + type + "</h2>" +
         "<p>" + description +
-        "<h3>" + value + "</h3>";
+        "<h3>" + value + "</h3>" +
+        "<button type=\"button\">Buy</button>";
     document.body.appendChild(element);
 </script>
 <script>addFooter();</script>
