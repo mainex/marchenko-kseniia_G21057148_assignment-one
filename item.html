@@ -8,6 +8,13 @@
 </head>
 <body>
 <script>addHeader();</script>
+<script>
+    const queryString = window.location.search;
+    console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    const type = urlParams.get('type'), color = urlParams.get('color'), description = urlParams.get('description'),
+        value = urlParams.get('value'), image = urlParams.get('image');
+</script>
 <script>addFooter();</script>
 </body>
 </html>

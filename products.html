@@ -56,11 +56,8 @@
     let lines = [];
 
     fetch("resources/items.csv").then(response => {
-        console.log(response.status);
         response.text().then(response => {
-            console.log(response); //Prints the response text on the console for debugging.
             lines = response.split('\n');
-            console.log(lines.length);
             for (let i = 0; i < lines.length; ++i) {
                 let line = lines[i].split(',');
                 if (line[0].length > 0) {
@@ -70,6 +67,7 @@
             createList();
         })
     });
+
     function createList() {
         let list = document.querySelector('#list');
         for (let i = 0; i < ALL_ITEMS.length; ++i) {
@@ -79,8 +77,8 @@
             element.innerHTML =
                 "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\">\n" +
                 "<h2>" + ALL_ITEMS[i].color + " " + ALL_ITEMS[i].type + "</h2>" +
-                "<p>" + ALL_ITEMS[i].description + "</p>\n" +
-                "<h3>" + ALL_ITEMS[i].value + "</h3>\n";
+                "<p>" + ALL_ITEMS[i].description + " <a href='item.html?type=" + ALL_ITEMS[i].type + "&color=" + ALL_ITEMS[i].color + "&description=" + ALL_ITEMS[i].description + "&value=" + ALL_ITEMS[i].value + "&image=" + ALL_ITEMS[i].image + "'>more</a>" + "</p>" +
+                "<h3>" + ALL_ITEMS[i].value + "</h3>";
             list.appendChild(element);
         }
     }
