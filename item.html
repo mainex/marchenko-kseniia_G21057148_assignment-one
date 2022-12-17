@@ -10,9 +10,9 @@
 <script>addHeader();</script>
 <script>
     const query = window.location.search;
-    console.log(query);
     const params = new URLSearchParams(query);
-    const type = params.get('type'), color = params.get('color'), description = params.get('description'),
+    const id = params.get('id'), type = params.get('type'), color = params.get('color'),
+        description = params.get('description'),
         value = params.get('value'), image = params.get('image');
 
     let element = document.createElement("div");
@@ -22,8 +22,12 @@
         "<h2>" + color + " " + type + "</h2>" +
         "<p>" + description +
         "<h3>" + value + "</h3>" +
-        "<button type=\"button\">Buy</button>";
+        "<button type=\"button\" onclick=\"addToCart(" + id + ")\">Buy</button>";
     document.body.appendChild(element);
+
+    function addToCart(number) {
+        localStorage.setItem("cartItem" + localStorage.length, number);
+    }
 </script>
 <script>addFooter();</script>
 </body>
