@@ -19,10 +19,10 @@
     element.className = "itemPage";
     element.innerHTML =
         "<img src=\"resources/" + _image + "\" alt=\"" + _description + "\" width=\"100%\">\n" +
-        "<h2>" + _color + " " + _type + "</h2>" +
+        "<h3>" + _color + " " + _type + "</h3>" +
         "<p>" + _description +
-        "<h3>" + _value + "</h3>" +
-        "<button type=\"button\" onclick=\"addToCart(" + _id + ")\">Buy</button>";
+        "<h4>" + _value + "</h4>" +
+        "<button class=\"buyButton\" type=\"button\" onclick=\"addToCart(" + _id + ")\">Buy</button>";
     document.body.appendChild(element);
 
     function addToCart(number) {

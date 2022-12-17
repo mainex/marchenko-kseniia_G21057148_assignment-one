@@ -1,17 +1,41 @@
+* {
+    font-family: sans-serif;
+}
+
 [class*="itemCard"] {
     width: 200px;
-    background-color: #C7CBDA;
+    background-color: #FFFFFF;
+}
+
+.filterBtn {
+    border-style: unset;
+    color: black;
 }
 
 .active, .filterBtn:hover {
-    background-color: #666;
+    background-color: #577A9B;
     color: white;
+    font-size: small;
+}
+
+.buyButton {
+    background-color: #BE1622;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: large;
+    border-radius: 12px;
+}
+
+.buyButton:hover {
+    background-color: #F47721;
 }
 
 footer {
     place-items: start;
     display: flex;
-    background-color: #BE1622;
+    background-color: #34516C;
     margin: 0px;
 }
 
@@ -28,14 +52,33 @@ header {
 }
 
 h1 {
-
+    color: #FFFFFF;
+    font-size: large;
 }
 
 h2 {
+    color: #34516C;
+    font-size: xx-large;
+}
+
+h3 {
     color: #F2BE1A;
-    margin: 10px;
+    /*margin: 10px;*/
+    font-size: x-large;
+}
+
+h4 {
+    font-size: large;
 }
 
 body {
     margin: 0px;
+}
+
+.footerAndHeaderText {
+    color: #FFFFFF;
+}
+
+a {
+    color: #007FB0;
 }
