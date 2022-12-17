@@ -23,8 +23,10 @@ Page has a filter. You can choose which type of items you want to be shown: hood
 
 ## Cart
 
-Doesn't contain anything.
+Contains a table with a list of chosen items. Every string describes has an image, a title of item and how much does it
+cost.
 
 ## Item
 
-Describes the item. Contains an image, description and value. Has a button "Buy".
+Describes the item. Contains an image, description and value. Has a button "Buy". After clicking on this button the item
+appears in the cart.

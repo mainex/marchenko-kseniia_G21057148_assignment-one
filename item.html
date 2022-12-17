@@ -11,22 +11,27 @@
 <script>
     const query = window.location.search;
     const params = new URLSearchParams(query);
-    const id = params.get('id'), type = params.get('type'), color = params.get('color'),
-        description = params.get('description'),
-        value = params.get('value'), image = params.get('image');
+    const _id = params.get('id'), _type = params.get('type'), _color = params.get('color'),
+        _description = params.get('description'),
+        _value = params.get('value'), _image = params.get('image');
 
     let element = document.createElement("div");
     element.className = "itemPage";
     element.innerHTML =
-        "<img src=\"resources/" + image + "\" alt=\"" + description + "\" width=\"100%\">\n" +
-        "<h2>" + color + " " + type + "</h2>" +
-        "<p>" + description +
-        "<h3>" + value + "</h3>" +
-        "<button type=\"button\" onclick=\"addToCart(" + id + ")\">Buy</button>";
+        "<img src=\"resources/" + _image + "\" alt=\"" + _description + "\" width=\"100%\">\n" +
+        "<h2>" + _color + " " + _type + "</h2>" +
+        "<p>" + _description +
+        "<h3>" + _value + "</h3>" +
+        "<button type=\"button\" onclick=\"addToCart(" + _id + ")\">Buy</button>";
     document.body.appendChild(element);
 
     function addToCart(number) {
-        localStorage.setItem("cartItem" + localStorage.length, number);
+        const item = {
+            image: _image,
+            name: _color + " " + _type,
+            value: _value,
+        }
+        localStorage.setItem("cartItem" + localStorage.length, JSON.stringify(item));
     }
 </script>
 <script>addFooter();</script>
