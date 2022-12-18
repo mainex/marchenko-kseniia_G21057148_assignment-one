@@ -18,7 +18,7 @@ function addHeader() {
     let header = document.createElement("header");
     header.innerHTML =
         "<img src='resources/images/logo.svg' width='200px'>" +
-        "<div><h1 class=\"footerAndHeaderText\">Student Shop</h1></div>" +
+        "<div style=\"margin-left: 10%\"><h1 class=\"footerAndHeaderText\">  Student Shop</h1></div>" +
         "<div style=\"margin-right: 10px;margin-left: auto;\">" +
         "<a class=\"footerAndHeaderText\" href=\"index.html\">Home</a>" +
         "<a class=\"footerAndHeaderText\" href=\"products.html\">Products</a>" +

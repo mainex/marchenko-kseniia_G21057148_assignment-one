@@ -36,7 +36,11 @@
             "<td>" +
             "<img style='width: 200px;' src=\"resources/" + item.image + "\" alt =\"" + item.name + "\" width =\"300\">" +
             "</td>" +
-            "<td style='width: 50%'>" + item.name + "</td>" +
+            "<td style='width: 50%'>" +
+            "<a href='item.html?id=" + i + "&type=" + item.type + "&color=" + item.color +
+            "&description=" + item.description + "&value=" + item.value +
+            "&image=" + item.image + "'>" + item.name + "</a>" +
+            "</td>" +
             "<td>" + item.value + "</td>" +
             "<td>" +
             "<button class=\"deleteBtn\" onclick='deleteItemFromCart(keys[" + i + "-1], " + i + ")'>Delete</button>" +

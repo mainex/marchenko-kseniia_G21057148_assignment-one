@@ -31,6 +31,9 @@
             image: _image,
             name: _color + " " + _type,
             value: _value,
+            description: _description,
+            color: _color,
+            type: _type,
         }
         localStorage.setItem("cartItem" + localStorage.length, JSON.stringify(item));
         alert("Added to Cart successfully.")
