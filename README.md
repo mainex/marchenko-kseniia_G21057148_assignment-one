@@ -1,7 +1,7 @@
 # Marchenko Kseniia. Assignment 1
 
 G21057148  
-<KMarchenko@uclan.ac.uk>
+<KMarchenko@uclan.ac.uk>  
 <https://github.com/mainex/marchenko-kseniia_G21057148_assignment-one>
 
 Assigment project for c01418 module: web application for the Student’s Union Shop at UCLan.
