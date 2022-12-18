@@ -20,7 +20,7 @@
     font-size: small;
 }
 
-.buyButton {
+.buyBtn {
     background-color: #BE1622;
     border: none;
     color: white;
@@ -30,7 +30,7 @@
     border-radius: 12px;
 }
 
-.buyButton:hover {
+.buyBtn:hover {
     background-color: #F47721;
 }
 
@@ -108,4 +108,18 @@ iframe {
     text-align: left;
     font-size: large;
     min-height: 80%;
+}
+
+.deleteBtn {
+    background-color: #339933;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: medium;
+    border-radius: 10px;
+}
+
+.deleteBtn:hover {
+    background-color: #006250;
 }
