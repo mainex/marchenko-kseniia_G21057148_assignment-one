@@ -23,25 +23,31 @@
         "<th></th>" +
         "</tr>";
     let keys = Object.keys(localStorage), length = keys.length;
-    if (0 === length) {
-        document.getElementById("fullCartDiv").innerHTML = "<p> Your cart is empty now. You can visit the <a href='products.html'>Products page</a> and choose some items.";
-    } else {
-        for (let i = 1; i <= length; ++i) {
-            let item = JSON.parse(localStorage.getItem(keys[i - 1]));
-            console.log(item);
-            tableText += "<tr>" +
-                "<td style='width: 5%'>" + i + "</td>" +
-                "<td><img style='width: 200px;' src=\"resources/" + item.image + "\" alt =\"" + item.name + "\" width =\"300\"></td>" +
-                "<td style='width: 50%'>" + item.name + "</td>" +
-                "<td>" + item.value + "</td>" +
-                "<td><button class=\"deleteBtn\" onclick='deleteItemFromCart(keys[" + i + "-1])'>Delete</button></td>" +
-                "</tr>";
+    emptyCheck();
+    for (let i = 1; i <= length; ++i) {
+        let item = JSON.parse(localStorage.getItem(keys[i - 1]));
+        console.log(item);
+        tableText += "<tr id='tr" + i + "'>" +
+            "<td style='width: 5%'>" + i + "</td>" +
+            "<td><img style='width: 200px;' src=\"resources/" + item.image + "\" alt =\"" + item.name + "\" width =\"300\"></td>" +
+            "<td style='width: 50%'>" + item.name + "</td>" +
+            "<td>" + item.value + "</td>" +
+            "<td><button class=\"deleteBtn\" onclick='deleteItemFromCart(keys[" + i + "-1], " + i + ")'>Delete</button></td>" +
+            "</tr>";
+    }
+
+    function deleteItemFromCart(key, row) {
+        localStorage.removeItem(key);
+        document.getElementById("tr" + row).style.display = "none";
+        emptyCheck();
+    }
+
+    function emptyCheck() {
+        if (0 === Object.keys(localStorage).length) {
+            document.getElementById("fullCartDiv").innerHTML = "<p> Your cart is empty now. You can visit the <a href='products.html'>Products page</a> and choose some items.";
         }
     }
-    function deleteItemFromCart(key) {
-        localStorage.removeItem(key);
-        location.reload();
-    }
+
     document.getElementById("cartTable").innerHTML = tableText;
 </script>
 <script>addFooter();</script>
