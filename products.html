@@ -78,12 +78,11 @@
             let element = document.createElement("div");
             element.className = "itemCard" + ALL_ITEMS[i].type;
             element.id = "itemCard" + i;
-            element.style = "position: relative;"
             element.innerHTML =
                 "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\">" +
                 "<h3>" + ALL_ITEMS[i].color + " " + ALL_ITEMS[i].type + "</h3>" +
                 "<p>" + ALL_ITEMS[i].description + " <a href='item.html?id=" + i + "&type=" + ALL_ITEMS[i].type + "&color=" + ALL_ITEMS[i].color + "&description=" + ALL_ITEMS[i].description + "&value=" + ALL_ITEMS[i].value + "&image=" + ALL_ITEMS[i].image + "'>more</a>" + "</p>" +
-                "<h4 style=\"position: relative; bottom: 0px; right: 0px;\">" + ALL_ITEMS[i].value + "</h4>";
+                "<div style='display: flex;'><h4>" + ALL_ITEMS[i].value + "</h4><button class=\"buyBtn\" type=\"button\" onclick=\"addToCart(" + i + ")\">Buy</button> </div>";
             list.appendChild(element);
         }
     }
@@ -102,6 +101,16 @@
                 item.style.display = "none";
             }
         }
+    }
+
+    function addToCart(number) {
+        const item = {
+            image: ALL_ITEMS[number].image,
+            name: ALL_ITEMS[number].color + " " + ALL_ITEMS[number].type,
+            value: ALL_ITEMS[number].value,
+        }
+        localStorage.setItem("cartItem" + localStorage.length, JSON.stringify(item));
+        alert("Added to Cart successfully.")
     }
 </script>
 

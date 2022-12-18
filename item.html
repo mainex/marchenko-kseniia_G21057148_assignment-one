@@ -23,9 +23,8 @@
 
         "<img src=\"resources/" + _image + "\" alt=\"" + _description + "\" width=\"100%\">" +
         "<h4>" + _value + "</h4>" +
-        "<button style=\"margin-bottom: 10px;\" class=\"buyBtn\" type=\"button\" onclick=\"addToCart(" + _id + ")\">Buy</button>";
+        "<button class=\"buyBtn\" type=\"button\" onclick=\"addToCart(" + _id + ")\">Buy</button>";
     document.body.appendChild(element);
-
     function addToCart(number) {
         const item = {
             image: _image,
@@ -33,6 +32,8 @@
             value: _value,
         }
         localStorage.setItem("cartItem" + localStorage.length, JSON.stringify(item));
+        alert("Added to Cart successfully.")
+
     }
 </script>
 <script>addFooter();</script>
