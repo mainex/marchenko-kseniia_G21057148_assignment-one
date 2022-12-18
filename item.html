@@ -16,13 +16,14 @@
         _value = params.get('value'), _image = params.get('image');
 
     let element = document.createElement("div");
-    element.className = "itemPage";
+    element.className = "mainDiv";
     element.innerHTML =
-        "<img src=\"resources/" + _image + "\" alt=\"" + _description + "\" width=\"100%\">\n" +
-        "<h3>" + _color + " " + _type + "</h3>" +
-        "<p>" + _description +
+        "<h2>" + _color + " " + _type + "</h2>" +
+        "<p>" + _description + "</p>" +
+
+        "<img src=\"resources/" + _image + "\" alt=\"" + _description + "\" width=\"100%\">" +
         "<h4>" + _value + "</h4>" +
-        "<button class=\"buyButton\" type=\"button\" onclick=\"addToCart(" + _id + ")\">Buy</button>";
+        "<button style=\"margin-bottom: 10px;\" class=\"buyButton\" type=\"button\" onclick=\"addToCart(" + _id + ")\">Buy</button>";
     document.body.appendChild(element);
 
     function addToCart(number) {
