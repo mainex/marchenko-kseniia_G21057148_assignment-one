@@ -10,6 +10,8 @@
 .filterBtn {
     border-style: unset;
     color: black;
+    padding: 5px 10px;
+    margin: 5px;
 }
 
 .active, .filterBtn:hover {
