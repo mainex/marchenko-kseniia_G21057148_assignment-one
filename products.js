@@ -47,6 +47,7 @@ fetch("resources/items.csv").then(response => {
         createList();
     })
 });
+
 function createList() {
     let list = document.querySelector('#list');
     for (let i = 0; i < ALL_ITEMS.length; ++i) {
@@ -93,6 +94,7 @@ function addToCart(number) {
         color: ALL_ITEMS[number].color,
         type: ALL_ITEMS[number].type,
     }
+    console.log(number);
     localStorage.setItem("cartItem" + localStorage.length, JSON.stringify(item));
     alert("Added to Cart successfully.")
 }
