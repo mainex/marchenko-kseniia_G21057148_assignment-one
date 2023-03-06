@@ -23,6 +23,7 @@ function addHeader() {
         "<a class=\"footerAndHeaderText\" href=\"index.html\">Home</a>" +
         "<a class=\"footerAndHeaderText\" href=\"products.html\">Products</a>" +
         "<a class=\"footerAndHeaderText\" href=\"cart.html\">Cart</a>" +
+        "<a class=\"footerAndHeaderText\" href=\"signup.html\">Sign up</a>" +
         "</div>";
     document.body.appendChild(header);
 }
