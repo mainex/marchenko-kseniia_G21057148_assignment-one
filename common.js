@@ -16,13 +16,24 @@ function addFooter() {
 
 function addHeader() {
     let header = document.createElement("header");
-    header.innerHTML =
+    let headerInput =
         "<img src='resources/images/logo.svg' width='200px'>" +
         "<div style=\"margin-left: 10%\"><h1 class=\"footerAndHeaderText\">  Student Shop</h1></div>" +
         "<div style=\"margin-right: 10px;margin-left: auto;\">" +
         "<a class=\"footerAndHeaderText\" href=\"index.html\">Home</a>" +
         "<a class=\"footerAndHeaderText\" href=\"products.html\">Products</a>" +
-        "<a class=\"footerAndHeaderText\" href=\"cart.html\">Cart</a>" +
+        "<a class=\"footerAndHeaderText\" href=\"cart.php\">Cart</a>" +
         "</div>";
+    if (isSignUp()) {
+        headerInput += "<a class=\"footerAndHeaderText\" href=\"signup.html\">Sign up</a>";
+    } else {
+        headerInput += "<a class=\"footerAndHeaderText\" href=\"signup.html\">Log out</a>";
+    }
+    headerInput += "</div>";
+    header.innerHTML = headerInput;
     document.body.appendChild(header);
+}
+
+function isSignUp() { // TODO
+    return true;
 }
