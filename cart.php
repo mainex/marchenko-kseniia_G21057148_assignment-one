@@ -28,7 +28,7 @@
     </div>
 </div>
 <?php
-
+$connection = mysqli_connect("vesta.uclan.ac.uk", "kmarchenko", "unvbezEy", "kmarchenko");
 ?>
 <script>fillTheTable();
     addFooter();</script>
