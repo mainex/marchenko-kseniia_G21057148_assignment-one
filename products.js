@@ -27,7 +27,8 @@ class Item {
     get id() {
         return this._id;
     }
-    get title(){
+
+    get title() {
         return this._title;
     }
 }
@@ -56,7 +57,7 @@ function createList() {
         let element = document.createElement("div");
         element.className = "itemCard" + ALL_ITEMS[i].type;
         element.id = "itemCard" + i;
-        element.innerHTML = "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\">" + "<h3>" + ALL_ITEMS[i].title + "</h3>" + "<p>" + ALL_ITEMS[i].description + " " + "<a href='item.html?id=" + i + "&type=" + ALL_ITEMS[i].type+"&title=" + ALL_ITEMS[i].title + "&description=" + ALL_ITEMS[i].description + "&value=" + ALL_ITEMS[i].value + "&image=" + ALL_ITEMS[i].image + "'>more</a>" + "</p>" + "<div style='display: flex;'><h4 style='margin-right: 10px;'>" + ALL_ITEMS[i].value + "</h4>" + "<button class=\"buyBtn\" type=\"button\" onclick=\"addToCart(" + i + ")\">Buy</button>" + "</div>";
+        element.innerHTML = "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\">" + "<h3>" + ALL_ITEMS[i].title + "</h3>" + "<p>" + ALL_ITEMS[i].description + " " + "<a href='item.html?id=" + i + "&type=" + ALL_ITEMS[i].type + "&title=" + ALL_ITEMS[i].title + "&description=" + ALL_ITEMS[i].description + "&value=" + ALL_ITEMS[i].value + "&image=" + ALL_ITEMS[i].image + "'>more</a>" + "</p>" + "<div style='display: flex;'><h4 style='margin-right: 10px;'>" + ALL_ITEMS[i].value + "</h4>" + "<button class=\"buyBtn\" type=\"button\" onclick=\"addToCart(" + i + ")\">Buy</button>" + "</div>";
         list.appendChild(element);
     }
 }
