@@ -14,8 +14,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     echo ',';
     echo $row["product_image"];
     echo ',';
-    echo $row["product_id"];
+    echo $row["product_title"];
     echo ',';
+    echo $row["product_id"];
     echo ";";
 }
 
