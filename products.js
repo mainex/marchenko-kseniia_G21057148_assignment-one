@@ -82,7 +82,7 @@ function updateList(filter) {
 function addToCart(number) {
     const item = {
         image: ALL_ITEMS[number].image,
-        name: ALL_ITEMS[number].title,
+        title: ALL_ITEMS[number].title,
         value: ALL_ITEMS[number].value,
         description: ALL_ITEMS[number].description,
         type: ALL_ITEMS[number].type,

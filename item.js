@@ -10,7 +10,7 @@ document.body.appendChild(element);
 
 function addToCart() {
     const item = {
-        image: _image, name: _title, value: _value, description: _description, type: _type, title: _title,
+        image: _image, title: _title, value: _value, description: _description, type: _type, title: _title,
     }
     localStorage.setItem("cartItem" + localStorage.length, JSON.stringify(item));
     alert("Added to Cart successfully.")
