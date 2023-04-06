@@ -1,18 +1,20 @@
+<?php
+include_once("common.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Item</title>
-    <script src="common.js"></script>
     <link rel="stylesheet" href="shop.css">
 </head>
 <body>
 
-<script>addHeader();</script>
+<?php addHeader(); ?>
 
 <script src="item.js"></script>
 
-<script>addFooter();</script>
+<?php addFooter(); ?>
 
 </body>
 </html>

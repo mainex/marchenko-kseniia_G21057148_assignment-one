@@ -1,4 +1,6 @@
 <?php
+include_once("common.php");
+$connection = require __DIR__ . "/database.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $connection = require __DIR__ . "/database.php";
@@ -8,9 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = mysqli_query($connection, $sql);
     $user = $result->fetch_assoc();
 
-    if($user){
-        if(password_verify($_POST["password"], $user["user_pass"])){
-            die("Login successful.");
+    if ($user) {
+        if (password_verify($_POST["password"], $user["user_pass"])) {
+            session_start();
+            $_SESSION["user_id"]=$user["user_id"];
+            header("Location: products.php");
+            exit;
         }
     }
 }
@@ -25,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
 
-<script>addHeader();</script>
+<?php addHeader();?>
 <div class="mainDiv">
     <h2>Log in</h2>
     <form action="login.php" method="post">
@@ -40,8 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <button>Log in</button>
     </form>
-    <p>Do not have an account yet? <a href="signup.html">Sign up</a></p>
+    <p>Do not have an account yet? <a href="signup.php">Sign up</a></p>
 </div>
-<script>addFooter();</script>
+<?php addFooter();?>
 </body>
 </html>

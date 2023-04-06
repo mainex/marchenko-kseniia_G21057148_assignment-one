@@ -33,7 +33,7 @@ xmlhttp.onload = function () {
     }
     createOffersList();
 }
-xmlhttp.open("POST", "index.php");
+xmlhttp.open("POST", "offers.php");
 xmlhttp.send();
 
 function createOffersList() {

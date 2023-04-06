@@ -1,16 +1,18 @@
+<?php
+include_once("common.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Cart</title>
-    <script src="common.js"></script>
     <script src="cart.js"></script>
     <link rel="stylesheet" href="shop.css">
 </head>
 
 <body>
 
-<script>addHeader();</script>
+<?php addHeader(); ?>
 
 <div class="mainDiv">
     <h2>Shopping Cart</h2>
@@ -20,8 +22,9 @@
     </div>
 </div>
 
-<script>fillTheTable();
-    addFooter();</script>
+<script>fillTheTable();</script>
+<?php addFooter(); ?>
+
 
 </body>
 </html>
