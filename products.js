@@ -57,7 +57,7 @@ function createList() {
         let element = document.createElement("div");
         element.className = "itemCard" + ALL_ITEMS[i].type;
         element.id = "itemCard" + i;
-        element.innerHTML = "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\">" + "<h3>" + ALL_ITEMS[i].title + "</h3>" + "<p>" + ALL_ITEMS[i].description + " " + "" + i + "" + ALL_ITEMS[i].type + "" + ALL_ITEMS[i].title + "<a href='item.php?id=&type=&title=&description=&value=&image='>more</a>" + ALL_ITEMS[i].description + "" + ALL_ITEMS[i].value + "" + ALL_ITEMS[i].image + "" + "</p>" + "<div style='display: flex;'><h4 style='margin-right: 10px;'>" + ALL_ITEMS[i].value + "</h4>" + "<button class=\"buyBtn\" type=\"button\" onclick=\"addToCart(" + i + ")\">Buy</button>" + "</div>";
+        element.innerHTML = "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\">" + "<h3>" + ALL_ITEMS[i].title + "</h3>" + "<p>" + ALL_ITEMS[i].description + " " + "" + i + "" + ALL_ITEMS[i].type + "" + ALL_ITEMS[i].title + "<a href='item.php?id=&type=&title=&description=&value=&image='>more</a>" + "</p>" + "<div style='display: flex;'><h4 style='margin-right: 10px;'>" + ALL_ITEMS[i].value + "</h4>" + "<button class=\"buyBtn\" type=\"button\" onclick=\"addToCart(" + i + ")\">Buy</button>" + "</div>";
         list.appendChild(element);
     }
 }
