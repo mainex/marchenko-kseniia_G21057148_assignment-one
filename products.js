@@ -1,11 +1,11 @@
 class Item {
-    constructor(text, number) {
+    constructor(text) {
         this._type = text[0];
         this._description = text[1];
         this._value = text[2];
         this._image = text[3];
         this._title = text[4];
-        this._id = number;
+        this._id = text[5];
     }
 
     get type() {
