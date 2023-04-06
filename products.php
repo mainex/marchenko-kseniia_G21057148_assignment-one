@@ -1,8 +1,5 @@
 <?php
-$connection = mysqli_connect("vesta.uclan.ac.uk", "kmarchenko", "unvbezEy", "kmarchenko");
-if (mysqli_connect_errno()) {
-    echo "ERROR: could not connect to database: " . mysqli_connect_error();
-}
+$connection = require __DIR__ . "/database.php";
 $myQuery = "SELECT * FROM tbl_products";
 $result = mysqli_query($connection, $myQuery);
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
