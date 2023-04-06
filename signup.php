@@ -23,3 +23,16 @@ var_dump($passwordHash);
 
 $connection = require __DIR__ . "/database.php";
 
+$sql = "INSERT INTO tbl_users (user_full_name, user_address, user_email, user_pass) VALUES (?, ?, ?, ?)";
+
+$stmt = $connection->stmt_init();
+
+if (!$stmt->prepare($sql)){
+    die("SQL error: " .  $connection->error);
+}
+
+$stmt->bind_param("ssss", $_POST["fname"], $_POST["address"], $_POST["email"], $passwordHash);
+
+$stmt->execute();
+
+echo "Sign up successful.";
