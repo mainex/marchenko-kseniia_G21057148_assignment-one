@@ -1,5 +1,4 @@
 <?php
-session_start();
 function addHeader()
 {
     $header = "<header><img src='resources/images/logo.svg' width='200px'>" .
@@ -8,8 +7,8 @@ function addHeader()
         "<a class=\"footerAndHeaderText\" href=\"index.php\">Home</a>" .
         "<a class=\"footerAndHeaderText\" href=\"products.php\">Products</a>" .
         "<a class=\"footerAndHeaderText\" href=\"cart.php\">Cart</a>";
-    if (isset($_SESSION["user_id"])) {
-        $header .= "<a class=\"footerAndHeaderText\" href=\"signup.php\"Sign up / Log in</a></div></header>";
+    if (!isset($_SESSION["user_id"])) {
+        $header .= "<a class=\"footerAndHeaderText\" href=\"signup.php\">Sign up / Log in</a></div></header>";
     } else {
         $header .= "<a class=\"footerAndHeaderText\" href=\"logout.php\">Log out</a></div></header>";
     }
