@@ -57,7 +57,7 @@ function createList() {
         let element = document.createElement("div");
         element.className = "itemCard" + ALL_ITEMS[i].type;
         element.id = "itemCard" + i;
-        element.innerHTML = "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\">" + "<h3>" + ALL_ITEMS[i].title + "</h3>" + "<p>" + ALL_ITEMS[i].description + " " + "<a href='item.php?id=" + i + "&type=" + ALL_ITEMS[i].type + "&title=" + ALL_ITEMS[i].title + "&description=" + ALL_ITEMS[i].description + "&value=" + ALL_ITEMS[i].value + "&image=" + ALL_ITEMS[i].image + "'>more</a>" + "</p>" + "<div style='display: flex;'><h4 style='margin-right: 10px;'>" + ALL_ITEMS[i].value + "</h4>" + "<button class=\"buyBtn\" type=\"button\" onclick=\"addToCart(" + i + ")\">Buy</button>" + "</div>";
+        element.innerHTML = "<img src=\"resources/" + ALL_ITEMS[i].image + "\" alt=\"" + ALL_ITEMS[i].description + "\" width=\"100%\">" + "<h3>" + ALL_ITEMS[i].title + "</h3>" + "<p>" + ALL_ITEMS[i].description + " " + "<a href='item.php?id=" + ALL_ITEMS[i].id + "'>more</a>" + "</p>" + "<div style='display: flex;'><h4 style='margin-right: 10px;'>" + ALL_ITEMS[i].value + "</h4>" + "<button class=\"buyBtn\" type=\"button\" onclick=\"addToCart(" + ALL_ITEMS[i].id + ")\">Buy</button>" + "</div>";
         list.appendChild(element);
     }
 }
@@ -79,15 +79,7 @@ function updateList(filter) {
     }
 }
 
-function addToCart(number) {
-    const item = {
-        image: ALL_ITEMS[number].image,
-        title: ALL_ITEMS[number].title,
-        value: ALL_ITEMS[number].value,
-        description: ALL_ITEMS[number].description,
-        type: ALL_ITEMS[number].type,
-    }
-    console.log(number);
-    localStorage.setItem("cartItem" + localStorage.length, JSON.stringify(item));
-    alert("Added to Cart successfully.")
+function addToCart(id) {
+    localStorage.setItem("cartItem" + id, id);
+    alert("Added to Cart successfully.");
 }

@@ -23,7 +23,6 @@ include_once("common.php");
     </div>
 </div>
 
-<script>fillTheTable();</script>
 <?php addFooter(); ?>
 
 
