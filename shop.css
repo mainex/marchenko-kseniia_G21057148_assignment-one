@@ -82,6 +82,7 @@ h4 {
 body {
     margin: 0;
     height: 100%;
+    padding-bottom: 0;
 }
 html{
     height: 100%;
