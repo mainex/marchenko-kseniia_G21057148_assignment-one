@@ -11,7 +11,7 @@ include_once("common.php");
     <link rel="stylesheet" href="shop.css">
 </head>
 <body>
-<?php addHeader();?>
+<?php addHeader(); ?>
 <div class="mainDiv">
     <div id="btnContainer">
         <button class="filterBtn active" id="all" onclick='updateList("all")'>all products</button>
@@ -21,6 +21,6 @@ include_once("common.php");
     </div>
     <div id="list"></div>
 </div>
-<?php addFooter();?>
+<?php addFooter(); ?>
 </body>
 </html>

@@ -84,9 +84,11 @@ body {
     height: 100%;
     padding-bottom: 0;
 }
-html{
+
+html {
     height: 100%;
 }
+
 .footerAndHeaderText {
     color: #FFFFFF;
     margin: 10px;

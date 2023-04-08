@@ -27,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Sign up</title>
-    <script src="common.js"></script>
     <link rel="stylesheet" href="shop.css">
 </head>
 <body>
@@ -42,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
         <div>
             <label for="password">Password:</label><br>
-            <input type="text" id="password" name="password"><br>
+            <input type="password" id="password" name="password"><br>
         </div>
 
         <button>Log in</button>

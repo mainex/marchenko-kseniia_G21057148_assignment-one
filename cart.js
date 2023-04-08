@@ -61,7 +61,7 @@ xmlhttp.onload = function () {
 
     for (let i = 1; i <= ALL_ITEMS.length; ++i) {
         //let image = ALL_ITEMS[i].image, title = item[1], id = item[2], value = item[3];
-        tableText += "<tr id='tr" + i + "'><td style='width: 5%'>" + i + "</td><td><img style='width: 200px;' src=\"resources/" + ALL_ITEMS[i - 1].image + "\" alt =\"" + ALL_ITEMS[i - 1].title + "\" width =\"300\"></td><td style='width: 50%'><a href='item.html?id=" + ALL_ITEMS[i - 1].id + "'>" + ALL_ITEMS[i - 1].title + "</td><td>" + ALL_ITEMS[i - 1].value + "</td><td><button class=\"deleteBtn\" onclick='deleteItemFromCart(\"cartItem\"+" + ALL_ITEMS[i - 1].id + ", " + i + ")'>Delete</button></td></tr>";
+        tableText += "<tr id='tr" + i + "'><td style='width: 5%'>" + i + "</td><td><img style='width: 200px;' src=\"resources/" + ALL_ITEMS[i - 1].image + "\" alt =\"" + ALL_ITEMS[i - 1].title + "\" width =\"300\"></td><td style='width: 50%'><a href='item.php?id=" + ALL_ITEMS[i - 1].id + "'>" + ALL_ITEMS[i - 1].title + "</td><td>" + ALL_ITEMS[i - 1].value + "</td><td><button class=\"deleteBtn\" onclick='deleteItemFromCart(\"cartItem\"+" + ALL_ITEMS[i - 1].id + ", " + i + ")'>Delete</button></td></tr>";
         console.log(i);
     }
 

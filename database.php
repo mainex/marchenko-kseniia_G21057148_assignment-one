@@ -1,8 +1,8 @@
 <?php
-$hostname="vesta.uclan.ac.uk";
-$username="kmarchenko";
-$password="unvbezEy";
-$database="kmarchenko";
+$hostname = "vesta.uclan.ac.uk";
+$username = "kmarchenko";
+$password = "unvbezEy";
+$database = "kmarchenko";
 
 $connection = mysqli_connect($hostname, $username, $password, $database);
 

@@ -10,7 +10,7 @@ include_once("common.php");
 </head>
 <body>
 
-<?php addHeader();?>
+<?php addHeader(); ?>
 <div class="mainDiv">
     <h2>Sign up</h2>
     <form action="signupcheck.php" method="post" novalidate>
@@ -39,7 +39,7 @@ include_once("common.php");
     </form>
     <p>Already have an account? <a href="login.php">Log in</a></p>
 </div>
-<?php addFooter();?>
+<?php addFooter(); ?>
 
 </body>
 </html>
