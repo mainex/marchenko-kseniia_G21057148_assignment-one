@@ -14,6 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (password_verify($_POST["password"], $user["user_pass"])) {
             session_start();
             $_SESSION["user_id"]=$user["user_id"];
+            $_SESSION["user_full_name"]=$user["user_full_name"];
+            $_SESSION["user_address"]=$user["user_address"];
             header("Location: products.php");
             exit;
         }
