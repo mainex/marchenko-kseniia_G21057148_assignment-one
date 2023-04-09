@@ -31,8 +31,6 @@ if (empty($_POST["address"])) {
 }
 
 $passwordHash = password_hash($_POST["password"], PASSWORD_DEFAULT);
-print_r($_POST);
-var_dump($passwordHash);
 
 $connection = require __DIR__ . "/database.php";
 
