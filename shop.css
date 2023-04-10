@@ -142,3 +142,7 @@ iframe {
     border-color: #C7CBDA;
     border-width: initial;
 }
+
+[class*="reviewCard"] {
+
+}

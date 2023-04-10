@@ -24,10 +24,10 @@ $row = mysqli_fetch_array($result);
     <p><?php echo $row["product_desc"]; ?></p>
     <img src="resources/<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_desc"]; ?>" width="100%">
     <h4><?php echo $row["product_price"]; ?></h4>
-    <button class="buyBtn" type="button" onclick="addToCart(<?php echo $row["product_id"]; ?>)">Buy</button>
+    <button class="buyBtn" type="button" onclick="addToCart()">Buy</button>
     <div <?php if (!isset($_SESSION["user_id"])) echo "style=\"display: none;\"" ?>>
         <h3>Submit a review</h3>
-        <form action="review.php?id=<?php echo $_GET["id"];?>" method="post">
+        <form action="review.php?id=<?php echo $_GET["id"]; ?>" method="post">
             <div>
                 <label for="title">Title</label><br>
                 <input type="text" id="title" name="title"><br>
@@ -50,6 +50,10 @@ $row = mysqli_fetch_array($result);
             </div>
             <button>Submit</button>
         </form>
+    </div>
+    <div id="listOfReviews">
+        <h3>Reviews</h3>
+
     </div>
 </div>
 
